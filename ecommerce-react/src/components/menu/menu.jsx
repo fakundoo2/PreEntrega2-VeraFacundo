@@ -1,16 +1,25 @@
 import './menu.css'
 
 import CartWidget from '../cartwidget/cartwidget'
+import {Link} from 'react-router-dom'
 
 const Menu = () => {
     return(
         <header>
-            <h1>Buhonero3D</h1>
-
+            
+            <Link to={'./'}>
+                <h1>Buhonero3D</h1>
+            </Link>
+        
             <nav>
                 <ul>
-                    <li><a href="">inicio</a></li>
-                    <li><a href="">productos</a></li>                   
+                    <Link to={'/category/resina'}>
+                        <li>Resina</li>
+                    </Link>
+                    
+                    <Link to={'/category/plastico'}>
+                        <li>Plastico</li>
+                    </Link>                   
                     <CartWidget/>
                 </ul>
             </nav>
